@@ -3,6 +3,8 @@ version: '3.3'
 services:
   frappe:
     image: pipech/erpnext-docker-debian:mas-py3-latest
+    ports:
+      - "8379:8000"
     deploy:
       replicas: 1
     volumes:
@@ -16,8 +18,8 @@ services:
     labels:
       - "traefik.enable=true"
       # - "traefik.frontend.rule=Host:example1.com, example2.com" [Separate with comma]
-      - "traefik.frontend.rule=Host:example1.com"
-      - "traefik.port=80"
+      - "traefik.frontend.rule=Host:ecosteam.co"
+      - "traefik.port=8377"
       - "traefik.docker.network=traefik_proxy"
     networks:
       - traefik_proxy

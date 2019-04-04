@@ -4,8 +4,8 @@ services:
   traefik:
     image: traefik
     ports:
-      - "80:80"
-      - "443:443"
+      - "8377:80"
+      - "8378:443"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - traefik-certificates-storage-volumes:/etc/traefik/acme
