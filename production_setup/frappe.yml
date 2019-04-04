@@ -4,7 +4,7 @@ services:
   frappe:
     image: pipech/erpnext-docker-debian:mas-py3-latest
     ports:
-      - "8379:8000"
+      - "8379:80"
     deploy:
       replicas: 1
     volumes:
